@@ -4,25 +4,25 @@ on: [push]
 
 jobs:
   run-script:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-lastest
     steps:
-      - name: Checkout del codigo
-        uses: actions/checkout@v4
+      -name: Checkout del codigo
+      uses: actions/checkout@v4
 
-      - name: Configurar Python
-        uses: actions/setup-python@v4
-        with: 
-          python-version: "3.10"
+      -name: Configurar Python
+      uses: actions/setup-python@v4
+      with: 
+      python-version: "3.10"
 
-      - name: Ejecutar script
-        run: python script.py
+      -name: Ejecutar script
+      run: python script.py
 
-      - name: Subir resultado como artefacto
-        uses: actions/upload-artifact@v4
-        with:
-          name: resultado-ejecucion
-          path: resultado.txt
+      -name: Subir resultado como artefacto
+      uses: actions\upload-artifact@v4
+      with:
+        name: resultado-ejecucion
+        path: resultado.txt
 
-      - name: Notificar exito
-        if: ${{ success() }}
+      -name: Notificar exito
+        if: success()
         run: echo "Pipeline completado! Ver artefacto en Summary"
