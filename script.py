@@ -2,7 +2,7 @@ import datetime
 
 print("🔧 Ejecutando script de prueba...")
 
-tr\y:
+try:
     # Generar archivo de resultados
     with open("resultado.txt", "w") as file:
         file.write(f"Fecha de ejecución: {datetime.datetime.now()}\n")
