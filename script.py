@@ -8,6 +8,6 @@ try:
         file.write(f"Fecha de ejecución: {datetime.datetime.now()}\n")
         file.write("Estado: ÉXITO\n")
     print("✅ Archivo 'resultado.txt' creado!")
-except Exception as error:
+except Exception as erro:
     print(f"❌ Error: {error}")
     raise  # Esto hará fallar el workflow
